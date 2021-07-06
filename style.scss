@@ -28,8 +28,12 @@ a {
 }
 
 .card {
+    height: 100vh;
+    display: flex;
+    align-items: center;
     &-container {
-        padding: 10% 18%;
+        max-width: 920px;
+        margin: 0 auto;
     }
     &-list {
         display: flex;
@@ -83,28 +87,13 @@ a {
     }
 }
 
-// Desktop, large screens
-@media only screen and (max-width: 1200px) {
-    .card {
-        &-container {
-            padding: 5% 6%;
-        }
-    }
-}
-
-// Small screens, laptops
-@media only screen and (max-width: 1024px) {
-    .card {
-        &-button {
-            padding: 1rem 2rem;
-        }
-    }
-}
-
-
 // Tablets, mobile devices
 @media only screen and (max-width: 768px) {
     .card {
+        &-container {
+            padding: 3rem 1.5rem;
+        }
+        height: auto;
         &-list {
             flex-direction: column;
         }
@@ -119,4 +108,3 @@ a {
         }
     }
 }
-
